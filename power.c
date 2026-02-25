@@ -2,7 +2,7 @@
 int power(int, int);
 int main(){
     int a,b;
-    printf("Enter a and b:");
+    printf("Enter the base a and power b:");
     scanf("%d%d",&a,&b);
         printf("%d",power(a,b));
     return 0;
