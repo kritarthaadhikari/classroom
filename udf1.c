@@ -4,7 +4,7 @@ int main(){
     int sum=0,P,Q,start,end;
     printf("Enter start and end numbers:\n");
     scanf("%d%d",&start,&end);
-    printf("Enter P and Q:\n");
+    printf("Enter P and Q:\n"); 
     scanf("%d%d",&P,&Q);
     sum=findSum(P,Q,start,end);
     printf("The sum is %d",sum);
