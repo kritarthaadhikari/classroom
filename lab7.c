@@ -1,11 +1,7 @@
 //Wap to sort element in ascending and descending order using func and pointer concept
 #include <stdio.h>
 int sortAsc(int *arr, int size ){
-    //int rand = 4;]
-
     int* temp = arr + 8;
-    printf("%d", *temp);
-    printf("\n");
     int i,j;
     for(i=0;i<size;i++){
         for(j=i+1;j<size;j++){
@@ -29,9 +25,7 @@ int sortAsc(int *arr, int size ){
 int main(){
     int size;
     printf("Enter the size of array");
-    scanf("%d",&
-
-          size);
+    scanf("%d",&size);
     int arr[size],i;
     printf("Enter %d numbers:",size);
     for(i=0;i<size;i++){

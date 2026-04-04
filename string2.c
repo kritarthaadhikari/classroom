@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-    char str1[20],str[20];
+    char str1[20];
     int i,rev=1,len=0;
     printf("Enter a string");
     scanf("%[^\n]s", str1);
@@ -11,10 +11,7 @@ int main(){
         if(str1[i]!=str1[len-i-1]){
             rev=0;
             break;
-        }
-        else{
-            rev=1;
-        }
+        } 
     }
     if(rev==1){
         printf("%s is Palindrome",str1);
