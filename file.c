@@ -1,24 +1,23 @@
 #include <stdio.h>
+struct student
+{
+    char name[20];
+    int roll;
+}s;
 int main(){
-    FILE *filep;
-    filep=fopen("file.txt","w");
-    char ch,str[20];
-    do{
-        getchar();
-        printf("Enter string\n");
-        gets(str);
-        fputs(str,filep);
-        fputs("\n",filep);
-        puts("Any more strings?");
-        ch=getchar();
-    }while(ch=='Y'||ch=='y');
-    printf("Written successfully!\n");
-    fclose(filep);
-    filep= fopen("file.txt","r");
-    while(fgets(str,20,filep)){
-        puts(str);
-    }
-    fclose(filep);
-
+    FILE *fp;
+    fp= fopen("data.txt","w");
+    printf("Enter your name:");
+    gets(s.name);
+    printf("Enter your roll number:");
+    scanf("%d",&s.roll);
+    fwrite(&s,sizeof(struct student),1,fp);
+    printf("File written successfully!\n");
+    fclose(fp);
+    fp=fopen("data.txt","r");
+    printf("Contents of the file:\n");
+    fread(&s,sizeof(struct student),1,fp);
+    printf("Name:%s\nRoll Number:%d\n",s.name,s.roll);
+    fclose(fp);
     return 0;
 }
